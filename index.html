@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dungeons</title>
+
+    <script src="scripts/race-attributes.js"></script>
+    <script src="scripts/class-attributes.js"></script>
+    <script src="scripts/background-attributes.js"></script>
+    <script src="scripts/main.js"></script>
+</head>
+<body>
+    <div>
+        <h3>Race:</h3>
+        <select
+            onchange="raceChange(value)"
+        >
+            <option value="dwarf">Dwarf</option>
+            <option value="elf">Elf</option>
+            <option value="halfling">Halfling</option>
+            <option value="human">Human</option>
+            <option value="dragonborn">Dragonborn</option>
+            <option value="gnome">Gnome</option>
+            <option value="halfelf">Half-Elf</option>
+            <option value="halforc">Half-Orc</option>
+            <option value="tiefling">Tiefling</option>
+        </select>
+
+        <div>
+            <h4>Race Stats:</h4>
+            <div id="race-stats"></div>
+        </div>
+    </div>
+
+    <div>
+        <h3>Class:</h3>
+        <select
+            onchange="classChange(value)"
+        >
+            <option value="barbarian">Barbarian</option>
+            <option value="bard">Bard</option>
+            <option value="cleric">Cleric</option>
+            <option value="druid">Druid</option>
+            <option value="fighter">Fighter</option>
+            <option value="monk">Monk</option>
+            <option value="paladin">Paladin</option>
+            <option value="ranger">Ranger</option>
+            <option value="rogue">Rogue</option>
+            <option value="sorcerer">Sorcerer</option>
+            <option value="warlock">Warlock</option>
+            <option value="wizard">Wizard</option>
+        </select>
+    </div>
+
+    <div>
+        <h3>Dice:</h3>
+        <button onclick="simulateRoll(1, 4)">D4</button>
+        <button onclick="simulateRoll(1, 6)">D6</button>
+        <button onclick="simulateRoll(1, 8)">D8</button>
+        <button onclick="simulateRoll(0, 9)">D10</button>
+        <button onclick="simulateRoll(1, 12)">D12</button>
+        <button onclick="simulateRoll(1, 20)">D20</button>
+        <button onclick="simulateRoll(0, 99)">DP</button>
+    </div>
+</body>
+</html>
